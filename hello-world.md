@@ -3,36 +3,47 @@ title: Hello World
 ---
 Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 <!-- more -->
-## Quick Start
 
-### Create a new post
+## 快速开始
 
-``` bash
-$ hexo new "My New Post"
+### 创建项目
+
+```bash
+hexo new blog
 ```
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+### 初始化项目
 
-### Run server
-
-``` bash
-$ hexo server
+```bash
+hexo init
 ```
 
-More info: [Server](https://hexo.io/docs/server.html)
+## 自动部署
 
-### Generate static files
+安装扩展
 
-``` bash
-$ hexo generate
+```bash
+npm install hexo-deployer-git
 ```
 
-More info: [Generating](https://hexo.io/docs/generating.html)
+配置仓库 `/_config.yml`
 
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
+```yml
+deploy:
+  type: 'git'
+  repo: 'git@github.com:demodeom/demodeom.github.io'
 ```
 
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+## 下载文章
+
+删除默认文章目录
+
+```language
+rm source/_posts
+```
+
+克隆文章
+
+```bash
+git clone git@github.com:demodeom/hexo-blog.git source/_posts
+```
